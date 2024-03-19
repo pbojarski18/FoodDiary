@@ -39,22 +39,48 @@ namespace FoodDiary.Infrastructure.Repositories.Concrete
             }
         }
 
-        public void EditProductInPreDefinedMeal (MealType mealType, int productId, Product editedProduct)
+        public Product EditProductInPreDefinedMeal(MealType mealType, int productId, Product sreditedProduct)
         {
-            Meal meal = GetPreDefinedMealByType (mealType);
+            Meal meal = GetPreDefinedMealByType(mealType);
+
+            Product productToEdit = meal.Products.FirstOrDefault(p => p.Id == productId);
+
+            productToEdit.Name = sreditedProduct.Name;
+            productToEdit.Carbo = sreditedProduct.Carbo;
+            productToEdit.Protein = sreditedProduct.Protein;
+            productToEdit.Fat = sreditedProduct.Fat;
+            productToEdit.Calories = sreditedProduct.Calories;
+            return productToEdit;
+
+
+
+        }
+
+        public (double, double, double, double) CalculateMealsNutrition(MealType mealType)
+        {
+            Meal meal = GetPreDefinedMealByType(mealType);
             if (meal != null)
             {
-                Product productToEdit = meal.Products.FirstOrDefault(p => p.Id == productId);
-                if (productToEdit != null)
+                double totalCalories = 0;
+                double totalProtein = 0;
+                double totalCarbs = 0;
+                double totalFat = 0;
+
+                foreach (var product in meal.Products)
                 {
-                    productToEdit.Name = editedProduct.Name;
-                    productToEdit.Carbo = editedProduct.Carbo;
-                    productToEdit.Protein = editedProduct.Protein;
-                    productToEdit.Fat = editedProduct.Fat;
-                    productToEdit.Calories = editedProduct.Calories;
+                    totalCalories += product.Calories;
+                    totalProtein += product.Protein;
+                    totalCarbs += product.Carbo;
+                    totalFat += product.Fat;
                 }
+
+                return (totalCalories, totalProtein, totalCarbs, totalFat);
             }
-        } 
+            else
+            {
+                return (0, 0, 0, 0);
+            }
+        }
     }
 }
 

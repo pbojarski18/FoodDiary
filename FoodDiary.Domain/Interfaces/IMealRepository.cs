@@ -9,6 +9,8 @@ namespace FoodDiary.Domain.Interfaces
 
         public void AddProductToPreDefinedMeal(MealType mealType, Product product);
 
-        public void EditProductInPreDefinedMeal(MealType mealType, int productId, Product editedProduct);
+        public Product EditProductInPreDefinedMeal(MealType mealType, int productId, Product editedProduct);
+
+        public (double, double, double, double) CalculateMealsNutrition(MealType mealType);
     }
 }
