@@ -50,16 +50,6 @@ namespace FoodDiary.Infrastructure.Repositories.Common
             using JsonWriter writer = new JsonTextWriter(streamWriter);
             JsonSerializer serializer = new JsonSerializer();
             serializer.Serialize(writer, items);
-        }
-
-        //public void ReadFromFile()
-        //{
-        //    using StreamReader streamReader = new StreamReader(filePath);
-        //    using JsonReader reader = new JsonTextReader(streamReader);
-        //    JsonSerializer serializer = new JsonSerializer();
-        //    List<Product> items = serializer.Deserialize<List<Product>>(reader);
-        //}
-
-
+        }      
     }
 }

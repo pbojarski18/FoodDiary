@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodDiary", "FoodDiary\FoodDiary.csproj", "{35CA9F99-5E4A-4259-A512-09017E22AE7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodDiary", "FoodDiary\FoodDiary.csproj", "{35CA9F99-5E4A-4259-A512-09017E22AE7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodDiary.Domain", "FoodDiary.Domain\FoodDiary.Domain.csproj", "{DBE86A31-37D1-47F7-AC8E-DF7B9077E308}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodDiary.Domain", "FoodDiary.Domain\FoodDiary.Domain.csproj", "{DBE86A31-37D1-47F7-AC8E-DF7B9077E308}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodDiary.Application", "FoodDiary.Application\FoodDiary.Application.csproj", "{198A4950-10F9-4CBE-9061-2084610B0362}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodDiary.Application", "FoodDiary.Application\FoodDiary.Application.csproj", "{198A4950-10F9-4CBE-9061-2084610B0362}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodDiary.Infrastructure", "FoodDiary.Infrastructure\FoodDiary.Infrastructure.csproj", "{06781FDA-973A-406C-AE85-6201BFE7C4E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodDiary.Infrastructure", "FoodDiary.Infrastructure\FoodDiary.Infrastructure.csproj", "{06781FDA-973A-406C-AE85-6201BFE7C4E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodDairy.Tests", "FoodDairy.Tests\FoodDairy.Tests.csproj", "{0CE2564E-6648-49C8-9CEE-D52DB0C7971A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{06781FDA-973A-406C-AE85-6201BFE7C4E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06781FDA-973A-406C-AE85-6201BFE7C4E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06781FDA-973A-406C-AE85-6201BFE7C4E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CE2564E-6648-49C8-9CEE-D52DB0C7971A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CE2564E-6648-49C8-9CEE-D52DB0C7971A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CE2564E-6648-49C8-9CEE-D52DB0C7971A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CE2564E-6648-49C8-9CEE-D52DB0C7971A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

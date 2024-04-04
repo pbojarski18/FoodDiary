@@ -27,7 +27,7 @@ namespace FoodDiary.Infrastructure.Repositories.Concrete
                 existingProduct.Name = productToEdit.Name;
                 existingProduct.Calories = productToEdit.Calories;
                 existingProduct.Protein = productToEdit.Protein;
-                existingProduct.Carbo = productToEdit.Carbo;
+                existingProduct.Carbs = productToEdit.Carbs;
                 existingProduct.Fat = productToEdit.Fat;
                 SaveToFile();
             }

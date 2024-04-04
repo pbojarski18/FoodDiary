@@ -10,8 +10,10 @@ namespace FoodDiary.Domain.Models
 
         public double Protein { get; set; }
 
-        public double Carbo { get; set; }
+        public double Carbs { get; set; }
 
         public double Fat { get; set; }
+
+        public double Weight { get; set; } = 100;
     }
 }

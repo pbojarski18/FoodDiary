@@ -27,20 +27,20 @@ namespace FoodDiary.Application.Services
 
         }
 
-        public List<Product> ShowAll()
+        public List<Product> GetAll()
         {
             var products = _repository.GetAll();
             return products.ToList();
         }
 
-        public void RemoveProduct(int productId)
+        public void Remove(int productId)
         {
             
             _repository.Remove(productId);
 
         }
 
-        public Product Edit(int productId, string name, double calories, double protein, double carbo, double fat)
+        public Product Edit(int productId, string name, double calories, double protein, double carbs, double fat)
         {
             Product productToEdit = new Product()
             {
@@ -48,7 +48,7 @@ namespace FoodDiary.Application.Services
                 Name = name,
                 Calories = calories,
                 Protein = protein,
-                Carbo = carbo,
+                Carbs = carbs,
                 Fat = fat
             };
             _repository.Edit(productToEdit);

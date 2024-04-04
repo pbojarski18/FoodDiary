@@ -9,11 +9,11 @@ namespace FoodDiary.Application.Interfaces
     {      
         public int AddNew(Product newProduct);
 
-        public List<Product> ShowAll();
+        public List<Product> GetAll();
 
-        public void RemoveProduct(int productId);
+        public void Remove(int productId);
 
-        public Product Edit(int productId, string name, double calories, double protein, double carbo, double fat);
+        public Product Edit(int productId, string name, double calories, double protein, double carbs, double fat);
 
 
 
